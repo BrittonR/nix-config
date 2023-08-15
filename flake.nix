@@ -80,13 +80,11 @@
     in
     {
       darwinConfigurations = {
-        magrathea = darwinSystem "aarch64-darwin" "magrathea" "alex";
-        slartibartfast = darwinSystem "aarch64-darwin" "slartibartfast" "alex";
-        cat-laptop = darwinSystem "aarch64-darwin" "cat-laptop" "alex";
+        air = darwinSystem "aarch64-darwin" "air" "britton";
       };
 
       nixosConfigurations = {
-        testnix = nixosSystem "x86_64-linux" "testnix" "alex";
+        testnix = nixosSystem "x86_64-linux" "testnix" "britton";
       };
     };
 

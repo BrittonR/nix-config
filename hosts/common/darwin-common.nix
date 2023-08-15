@@ -4,7 +4,7 @@ let
 in 
 {
   # Nix configuration ------------------------------------------------------------------------------
-  users.users.alex.home = "/Users/alex";
+  users.users.britton.home = "/Users/britton";
 
   nix = {
     #package = lib.mkDefault pkgs.unstable.nix;
@@ -51,7 +51,7 @@ in
 
   # Keyboard
   system.keyboard.enableKeyMapping = true;
-  system.keyboard.remapCapsLockToEscape = false;
+  system.keyboard.remapCapsLockToEscape = true;
 
   # Add ability to used TouchID for sudo authentication
   security.pam.enableSudoTouchIdAuth = true;
@@ -60,7 +60,6 @@ in
     enable = true;
     enableCompletion = true;
     promptInit = (builtins.readFile ./../mac-dot-zshrc);
-    #interactiveShellInit = "/Users/alex/go/bin/figurine -f \"Rammstein.flf\" magrathea";
   };
 
   homebrew = {
@@ -69,22 +68,21 @@ in
     # updates homebrew packages on activation,
     # can make darwin-rebuild much slower (otherwise i'd forget to do it ever though)
     taps = [
+      "koekeishiya/formulae"
       #
     ];
     brews = [
+      "yabai"
+      "skhd"
       # home.nix
       # home.packages
     ];
     casks = [
-      #"alfred" # you are on alfred4 not 5
-      "audacity"
-      "balenaetcher"
-      "bartender"
       "discord"
-      "displaylink"
       "docker"
       "element"
       "firefox"
+      "github"
       "google-chrome"
       "istat-menus"
       "iterm2"
@@ -108,6 +106,7 @@ in
       "thunderbird"
       "viscosity"
       "visual-studio-code"
+      "warp"
       "vlc"
       "wireshark"
       "yubico-yubikey-manager"
@@ -121,27 +120,11 @@ in
     masApps = {
       "Amphetamine" = 937984704;
       "Bitwarden" = 1352778147;
-      "Creator's Best Friend" = 1524172135;
-      "Disk Speed Test" = 425264550;
-      "iA Writer" = 775737590;
+      "Craft" = 1487937127;
+      "Infuse" = 1136220934;
       "Microsoft Remote Desktop" = 1295203466;
-      "Reeder" = 1529448980;
-      "Resize Master" = 1025306797;
-      # "Steam Link" = 123;
       "Tailscale" = 1475387142;
-      "Telegram" = 747648890;
-      "The Unarchiver" = 425424353;
-      "Todoist" = 585829637;
-      "UTM" = 1538878817;
       "Wireguard" = 1451685025;
-
-      # these apps with uk apple id
-      #"Final Cut Pro" = 424389933;
-      #"Logic Pro" = 634148309;
-      #"MainStage" = 634159523; 
-      #"Garageband" = 682658836;
-      #"ShutterCount" = 720123827;
-      #"Teleprompter" = 1533078079;
 
       "Keynote" = 409183694;
       "Numbers" = 409203825;
@@ -167,10 +150,18 @@ in
     NSGlobalDomain.InitialKeyRepeat = 25;
     NSGlobalDomain.KeyRepeat = 4;
     NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
+    NSGlobalDomain."com.apple.swipescrolldirection" = false;
     LaunchServices.LSQuarantine = false; # disables "Are you sure?" for new apps
     loginwindow.GuestEnabled = false;
 
   };
+  system.defaults.trackpad = {
+    Clicking = true;
+    TrackpadRightClick = true;
+    Dragging = true;
+    TrackpadThreeFingerDrag = false;
+  };
+  
   system.defaults.CustomUserPreferences = {
       "com.apple.finder" = {
         ShowExternalHardDrivesOnDesktop = true;
@@ -195,7 +186,7 @@ in
         DSDontWriteUSBStores = true;
       };
       "com.apple.dock" = {
-        autohide = false;
+        autohide = true;
         launchanim = false;
         static-only = false;
         show-recents = false;

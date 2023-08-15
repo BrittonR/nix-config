@@ -15,6 +15,7 @@ with pkgs; [
   du-dust
   dua
   duf
+  exa
   esptool
   ffmpeg
   fd
@@ -24,6 +25,7 @@ with pkgs; [
   go
   gnused
   #htop # programs.htop
+  helix
   hub
   hugo
   ipmitool
@@ -34,6 +36,7 @@ with pkgs; [
   mosh
   neofetch
   nmap
+  ranger
   ripgrep
   skopeo
   smartmontools

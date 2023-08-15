@@ -153,13 +153,8 @@ in
     NSGlobalDomain."com.apple.swipescrolldirection" = false;
     LaunchServices.LSQuarantine = false; # disables "Are you sure?" for new apps
     loginwindow.GuestEnabled = false;
-
-  };
-  system.defaults.trackpad = {
-    Clicking = true;
-    TrackpadRightClick = true;
-    Dragging = true;
-    TrackpadThreeFingerDrag = false;
+    NSGlobalDomain."com.apple.trackpad.enableSecondaryClick" = true;
+    NSGlobalDomain."com.apple.trackpad.trackpadCornerClickBehavior" = 1;
   };
   
   system.defaults.CustomUserPreferences = {
@@ -204,12 +199,15 @@ in
       };
       "com.apple.Safari" = {
         # Privacy: don’t send search queries to Apple
+        AutoFillPasswords = false;
         UniversalSearchEnabled = false;
         SuppressSearchSuggestions = true;
+        
       };
       "com.apple.AdLib" = {
         allowApplePersonalizedAdvertising = false;
       };
+
       "com.apple.SoftwareUpdate" = {
         AutomaticCheckEnabled = true;
         # Check for software updates daily, not just once per week

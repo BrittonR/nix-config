@@ -92,6 +92,7 @@ in
       "monitorcontrol"
       "mqtt-explorer"
       "nextcloud"
+      "netnewswire"
       "notion"
       "obs"
       "obsidian"

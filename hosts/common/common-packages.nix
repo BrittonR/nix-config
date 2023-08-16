@@ -41,6 +41,7 @@ with pkgs; [
   skopeo
   smartmontools
   terraform
+  thefuck
   tree
   unzip
   watch

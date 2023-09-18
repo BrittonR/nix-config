@@ -3,7 +3,8 @@
 with pkgs; [
   ## unstable
   unstablePkgs.yt-dlp
-
+  unstablePkgs.wasmer
+  # unstablePkgs.eza
   ## stable
   ansible
   asciinema
@@ -15,7 +16,7 @@ with pkgs; [
   du-dust
   dua
   duf
-  exa
+  eza
   esptool
   ffmpeg
   fd

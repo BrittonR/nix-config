@@ -52,6 +52,7 @@
 
   programs.helix = {
     enable = true;
+    defaultEditor = true;
     settings = {
   theme = "base16_default_dark";
   editor.lsp.display-messages = true;
@@ -63,12 +64,14 @@
   };
   };
 
-  programs.exa.enable = true;
-  programs.exa.enableAliases = true;
+  programs.eza.enable = true;
+  programs.eza.enableAliases = true;
   programs.home-manager.enable = true;
   programs.neovim.enable = true;
   programs.nix-index.enable = true;
   programs.zoxide.enable = true;
+  programs.yazi.enable =  true;
+  programs.yazi.enableZshIntegration = true;
   home.file.yabai = {
     executable = true;
     target = ".config/yabai/yabairc";
@@ -118,94 +121,8 @@
         hostname = "10.42.1.30";
         user = "root";
       };
-      "testnix" = {
-        hostname = "10.42.0.50";
-        user = "alex";
-      };
-      "opn opnwd" = {
-        hostname = "10.42.0.254";
-        user = "alexktz";
-      };
-      "pihole" = {
-        hostname = "10.42.0.253";
-        user = "root";
-      };
-      "caddy" = {
-        hostname = "10.42.0.252";
-        user = "root";
-      };
-      # nr
-      "p pennywise" = {
-        hostname = "192.168.16.10";
-        user = "alex";
-      };
-      # lancs
-      "e elrond" = {
-        hostname = "100.105.174.16";
-        user = "alexktz";
-      };
-      # ktz-cloud
-      "cloud" = {
-        hostname = "100.89.12.127";
-        user = "ironicbadger";
-      };
-      # jb
-      "core" = {
-        hostname = "demo.selfhosted.show";
-        user = "ironicbadger";
-        port = 53142;
-      };
-      "status" = {
-        hostname = "hc.ktz.cloud";
-        user = "ironicbadger";
-        port = 53142;
-      };
     };
   };
 
-  # home.packages = with pkgs; [
-  #   ## unstable
-  #   unstablePkgs.yt-dlp
-  #   unstablePkgs.terraform
 
-  #   ## stable
-  #   ansible
-  #   asciinema
-  #   bitwarden-cli
-  #   coreutils
-  #   # direnv # programs.direnv
-  #   #docker
-  #   drill
-  #   du-dust
-  #   dua
-  #   duf
-  #   esptool
-  #   ffmpeg
-  #   fd
-  #   #fzf # programs.fzf
-  #   #git # programs.git
-  #   gh
-  #   go
-  #   gnused
-  #   #htop # programs.htop
-  #   hub
-  #   hugo
-  #   ipmitool
-  #   jetbrains-mono # font
-  #   just
-  #   jq
-  #   mas # mac app store cli
-  #   mc
-  #   mosh
-  #   neofetch
-  #   nmap
-  #   ripgrep
-  #   skopeo
-  #   smartmontools
-  #   tree
-  #   unzip
-  #   watch
-  #   wget
-  #   wireguard-tools
-  # ];
 }

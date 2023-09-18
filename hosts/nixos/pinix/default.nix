@@ -25,7 +25,6 @@
   {
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" ];
-    # hashedPassword = "$6$wW/xsljhhG/vssC3$ujh/4jSZp7APUsbI6FAAUtIkaWVl9ElocFV6FKO7vD4ouoXKiebecrfmtd46NNVJBOFO8blNaEvkOLmOW5X3j.";
   };
   users.users.britton.openssh.authorizedKeys.keyFiles = [
     ./../../authorized_keys
@@ -100,7 +99,7 @@
       fi
 
       # otherwise authenticate with tailscale
-      ${tailscale}/bin/tailscale up -authkey tskey-auth-kVZxwS5CNTRL-GLuJns73a7WZLLEhGjbREWa83TAWTGpTV'';
+      ${tailscale}/bin/tailscale up -authkey tskey-auth'';
   };
 
   services.sshd.enable = true;
